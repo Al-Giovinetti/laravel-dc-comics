@@ -3,6 +3,6 @@
 @section("title","Home")
 
 @section("main")
-<p> Parte centrale </p>
+<p> Lista fumetti </p>
 
 @endsection

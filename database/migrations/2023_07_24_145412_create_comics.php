@@ -14,7 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('comics', function (Blueprint $table) {
-            $table->id();
+            $table->smallIncrements("id");
+            $table->string("title",100);
+            $table->text("description");
+            $table->text("thumb");
+            $table->float("price",7,2);
+            $table->string("series",50);
+            $table->date("sale_date");
+            $table->string("type",50);
             $table->timestamps();
         });
     }

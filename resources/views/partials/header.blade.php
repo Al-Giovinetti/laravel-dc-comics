@@ -1,10 +1,3 @@
 <header>
-    <h1>Titolo X</h1>
-    <nav>
-        <ul>
-            <li>A</li>
-            <li>B</li>
-            <li>C</li>
-        </ul>
-    </nav>
+    <h1>Titolo</h1>
 </header>

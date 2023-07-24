@@ -1,5 +1,13 @@
 @import "~bootstrap/scss/bootstrap"; 
 
-body{
-    background-color: orangered;
+#client-home{
+    h1{
+        font-size: 5rem;
+    }
+    p{
+        font-weight: bold;
+    }
 }
+
+
+

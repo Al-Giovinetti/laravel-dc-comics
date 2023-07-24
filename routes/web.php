@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
+use App\Http\Controllers\Client\HomeController as ClientHomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,5 +15,7 @@ use App\Http\Controllers\Admin\HomeController as AdminHomeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get("/",[ClientHomeController::class,"index"])->name("client.home.index");
 
-Route::get("/",[AdminHomeController::class,"index"])->name("admin.home.index");
+Route::get("/home",[AdminHomeController::class,"index"])->name("admin.home.index");
+

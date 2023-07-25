@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\Admin\MovieController as AdminMovieController;
 use App\Http\Controllers\Guest\HomeController as GuestHomeController;
+
+use App\Http\Controllers\Admin\ComicController as AdminComicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,5 +18,5 @@ use App\Http\Controllers\Guest\HomeController as GuestHomeController;
 */
 Route::get("/",[GuestHomeController::class,'home'])->name("guest.home.index");
 
-Route::get("/index",[AdminMovieController::class,'index'])->name("admin.movies.index");
+Route::get("/index",[AdminComicController::class,'index'])->name("admin.comics.index");
 

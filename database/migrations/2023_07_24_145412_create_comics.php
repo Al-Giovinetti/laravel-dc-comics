@@ -22,6 +22,9 @@ return new class extends Migration
             $table->string("series",50);
             $table->date("sale_date");
             $table->string("type",50);
+            $table->string("artists");
+            $table->string("writers");
+
             $table->timestamps();
         });
     }

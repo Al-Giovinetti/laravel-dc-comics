@@ -19,5 +19,6 @@ use App\Http\Controllers\Admin\ComicController as AdminComicController;
 Route::get("/",[GuestHomeController::class,'home'])->name("guest.home.index");
 
 Route::get("/comics",[AdminComicController::class,'index'])->name("admin.comics.index");
+Route::get("/comics/create",[AdminComicController::class,'create'])->name("admin.comics.create");
 Route::get("/comics/{id}",[AdminComicController::class,'show'])->name("admin.comics.show");
 

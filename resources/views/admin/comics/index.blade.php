@@ -4,6 +4,9 @@
 
 @section("main")
 <div class="container">
+    <div class="row">
+        <a href="{{ route('admin.comics.create') }}" class="btn btn-primary">Aggiungi un nuovo fumetto</a>
+    </div>
     <div class="row m-0 d-flex justify-content-between">
         @foreach($comics as $comic)
             <div class="card text-center col-3 p-0 m-1" id="index-card">

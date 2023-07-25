@@ -4,7 +4,7 @@
 
 @section("main")
 <div class="container">
-    <div class="row">
+    <div class="row col-5 mx-auto mb-3">
         <a href="{{ route('admin.comics.create') }}" class="btn btn-primary">Aggiungi un nuovo fumetto</a>
     </div>
     <div class="row m-0 d-flex justify-content-between">

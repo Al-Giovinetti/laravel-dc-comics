@@ -4,13 +4,13 @@
 
 @section("main")
 <div class="container">
-    <div class="row m-0">
+    <div class="row m-0 d-flex justify-content-between">
         @foreach($comics as $comic)
-            <div class="card text-center col-4 p-0" id="index-card">
+            <div class="card text-center col-3 p-0 m-1" id="index-card">
                 <div class="card-header">
                     <ul class="nav nav-pills card-header-pills d-flex justify-content-center">
                         <li class="nav-item">
-                            <a class="btn btn-primary me-2" href="#">Mostra</a>
+                            <a class="btn btn-primary me-2" href="{{ route('admin.comics.show',$comic->id)}}">Mostra</a>
                         </li>
                         <li class="nav-item">
                             <a class="btn btn-success me-2" href="#">Modifica</a>

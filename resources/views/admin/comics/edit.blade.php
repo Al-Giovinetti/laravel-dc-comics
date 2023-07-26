@@ -50,7 +50,6 @@
             </div>
             <div class="mb-3 d-flex justify-content-around">
                 <button class=" btn btn-primary w-25" type="submit"> Modifica</button> 
-                <button class=" btn btn-warning w-25" type="reset" > Reset </button>
             </div>
         </form>
     </div>

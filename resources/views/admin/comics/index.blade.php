@@ -19,7 +19,11 @@
                             <a class="btn btn-success me-2" href="{{ route('admin.comics.edit',$comic->id)}}">Modifica</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-warning me-2">Cancella</a>
+                            <form action="{{ route('admin.comics.destroy',$comic->id)}}" method="POST">
+                                @csrf
+                                @method("delete")
+                                <button class="btn btn-warning me-2" type="submit">Elimina</a>
+                            </form>
                         </li>
                     </ul>
                 </div>

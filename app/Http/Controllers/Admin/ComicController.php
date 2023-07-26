@@ -86,11 +86,11 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
         $data = $request->all();
 
-        $updateComic = new Comic();
+        $updateComic = Comic :: find($id);
         $updateComic->title = $data['title'];
         $updateComic->description = $data['description'];
         $updateComic->thumb = $data['thumb'];
@@ -100,9 +100,10 @@ class ComicController extends Controller
         $updateComic->type = $data['type'];
         $updateComic->artists = $data['artists'];
         $updateComic->writers =  $data['writers'];
+
         $updateComic->update();
 
-        return redirect()->route("admin.comics.index");
+        return redirect()->route("admin.comics.show",$updateComic->id);
     }
 
     /**

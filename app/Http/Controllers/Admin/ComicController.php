@@ -73,8 +73,9 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Comic $comic)
+    public function edit($id)
     {
+        $comic = Comic::find($id);
         return view("admin.comics.edit",compact("comic"));
     }
 
@@ -85,7 +86,7 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         $data = $request->all();
 
@@ -99,9 +100,9 @@ class ComicController extends Controller
         $updateComic->type = $data['type'];
         $updateComic->artists = $data['artists'];
         $updateComic->writers =  $data['writers'];
-        $updateComic->save();
+        $updateComic->update();
 
-        return redirect()->route("admin.comics.show",$updateComic->id);
+        return redirect()->route("admin.comics.index");
     }
 
     /**

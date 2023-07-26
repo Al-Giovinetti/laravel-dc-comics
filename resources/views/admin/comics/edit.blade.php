@@ -5,7 +5,7 @@
 @section("main")
 <div class="container">
     <div class="row col-12">
-        <h1 class="text-center">Aggiugi un nuovo fumetto</h1>
+        <h1 class="text-center">Modifica i dati del fumetto</h1>
         <form action="{{ route('admin.comics.store')}}" method="POST" class="card">
             @csrf
             <div class="mb-3">

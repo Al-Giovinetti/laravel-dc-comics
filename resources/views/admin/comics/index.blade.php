@@ -16,7 +16,7 @@
                             <a class="btn btn-primary me-2" href="{{ route('admin.comics.show',$comic->id)}}">Mostra</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-success me-2" href="#">Modifica</a>
+                            <a class="btn btn-success me-2" href="{{ route('admin.comics.edit',$comic->id)}}">Modifica</a>
                         </li>
                         <li class="nav-item">
                             <a class="btn btn-warning me-2">Cancella</a>
